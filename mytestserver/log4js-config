@@ -1,0 +1,22 @@
+{
+     "appenders": {
+        "console": { "type": "stdout" },
+        "info": {"type": "dateFile",
+                 "filename": "logs/info/testserver-log",
+                 "pattern": "-yyyy-MM-dd.log",
+                 "alwaysIncludePattern": true,
+                 "category":"test"
+                 },
+         "error": {"type": "dateFile",
+                  "filename": "logs/error/testserver-log",
+                  "pattern": "-yyyy-MM-dd.log",
+                  "alwaysIncludePattern": true,
+                  "category":"test"
+                  }
+     },
+      "categories": {
+         "info": { "appenders": ["console","info"], "level": "info" },
+         "error": { "appenders": ["console","error"], "level": "error" },
+         "default": { "appenders": ["console"], "level": "debug"}
+       }
+}
